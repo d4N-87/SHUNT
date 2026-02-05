@@ -6,7 +6,7 @@
   <i>L'anello di congiunzione tra le risorse AI e il tuo workflow locale.</i>
   <br>
 </div>
-
+<p></p>
 <div align="center">
 
 [![Stargazers][stars-shield]][stars-url]
@@ -27,7 +27,7 @@
 
 ## 🖼️ Anteprima / Preview
 
-| 🇮🇹 Form di Input / 🇬🇧 Input Form | 🇮🇹 Analisi / 🇬🇧 Analyses | 🇮🇹 Filtri / 🇬🇧 Filters |
+| 🇮🇹 Pagina iniziale / 🇬🇧 Home page | 🇮🇹 Card modello / 🇬🇧 Model card | 🇮🇹 Encoder / 🇬🇧 Encoder |
 | :---: | :---: | :---: |
 | <img src="assets/screenshot_01.jpg" alt="Schermata iniziale" width="100%"> | <img src="assets/screenshot_02.jpg" alt="Schermata dei risultati" width="100%"> | <img src="assets/screenshot_03.jpg" alt="Esempio di encoder" width="100%"> |
 
