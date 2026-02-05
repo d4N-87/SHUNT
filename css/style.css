@@ -177,9 +177,64 @@
 
 /* --- RESPONSIVE --- */
 @media (max-width: 900px) { .kh-console-wrapper { grid-template-columns: 1fr; } .kh-mobile-hide { display: none; } }
+/* --- RESPONSIVE FIX (MOBILE OPTIMIZATION) --- */
 @media (max-width: 768px) {
-    .kh-header-content { flex-direction: column; gap: 20px; text-align: center; padding: 1.5rem 20px; }
-    .kh-logo-area { justify-content: center; }
-    .kh-nav { flex-direction: column; gap: 15px; width: 100%; }
-    .kh-ksimply-link { border-left: none; border-top: 1px solid var(--border-color); padding-left: 0; padding-top: 15px; }
+    /* Header più compatto per risparmiare spazio verticale */
+    .kh-header-content {
+        flex-direction: column;
+        gap: 12px; /* Ridotto gap */
+        text-align: center;
+        padding: 0.8rem 15px; /* Ridotto padding verticale */
+    }
+
+    .kh-main-logo { height: 32px; } /* Logo leggermente più piccolo */
+    .kh-hub-name { font-size: 1.1rem; }
+
+    .kh-nav {
+        flex-direction: column;
+        gap: 8px; /* Link più vicini */
+        width: 100%;
+    }
+
+    .kh-ksimply-link {
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        padding-left: 0;
+        padding-top: 8px;
+    }
+
+    /* CARD DETAIL: Riduzione font per titoli enormi */
+    .kh-card-title { font-size: 1.8rem; } /* Da 3rem a 1.8rem su mobile */
+    .kh-detail-card { padding: 1.5rem; } /* Meno spazio interno */
+
+    /* RELEASE ROWS: Il fix per i pulsanti incastrati */
+    .kh-release-row {
+        flex-direction: column; /* Impila elementi verticalmente */
+        align-items: flex-start;
+        gap: 12px;
+        padding: 1rem !important;
+    }
+
+    /* Forza i pulsanti a stare sulla destra o a prendersi lo spazio */
+    .kh-release-row > div:last-child {
+        width: 100%;
+        justify-content: flex-end; /* Pulsanti allineati a destra */
+        border-top: 1px solid rgba(255,255,255,0.05);
+        padding-top: 10px;
+    }
+
+    .kh-gb-tag { margin-left: auto; } /* Sposta il peso a destra del nome */
+
+    /* Ridimensionamento pulsanti download per mobile */
+    .kh-btn-dl { width: 60px; height: 32px; }
+    .kh-btn-copy { width: 32px; height: 32px; }
+}
+
+/* Fix extra per schermi molto stretti (es. iPhone SE) */
+@media (max-width: 400px) {
+    .kh-stats-panel { 
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+    .kh-stat-chip { font-size: 8px; padding: 0.3rem 0.5rem; }
 }
