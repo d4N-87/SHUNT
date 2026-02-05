@@ -19,7 +19,7 @@
 
 <div align="center">
 
-### ✨ [Cerca nel database! / Search the database!](https://d4n-87.github.io/SHUNT/)) ✨
+### ✨ [Cerca nel database! / Search the database!](https://d4n-87.github.io/SHUNT/) ✨
 
 </div>
 
