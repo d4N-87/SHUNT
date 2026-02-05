@@ -97,3 +97,20 @@ This project was built to be the perfect companion for [KSimply](https://github.
 # Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=d4N-87/SHUNT&type=Date)](https://www.star-history.com/#d4N-87/SHUNT&Date)
+
+---
+
+## 📄 Licenza / License
+
+<p>🇮🇹 Questo progetto è rilasciato sotto la Licenza MIT.</p>
+<p>🇬🇧 This project is released under the MIT License.</p>
+
+<!-- Link di Riferimento per i Badge (vanno alla fine del file) -->
+[stars-shield]: https://img.shields.io/github/stars/d4N-87/SHUNT?style=for-the-badge
+[stars-url]: https://github.com/d4N-87/SHUNT/stargazers
+[issues-shield]: https://img.shields.io/github/issues/d4N-87/SHUNT?style=for-the-badge
+[issues-url]: https://github.com/d4N-87/SHUNT/issues
+[license-shield]: https://img.shields.io/github/license/d4N-87/SHUNT?style=for-the-badge
+[license-url]: https://github.com/d4N-87/SHUNT/blob/main/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/danielenofi
