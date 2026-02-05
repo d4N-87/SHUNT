@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHUNT - AI Resource Hub</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo-icon.png">
+
+    <!-- Tailwind CSS (Utility classes) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Fira Code -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Custom Terminal Styling -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#1a1a1a]">
+
+    <div id="kh-master-root">
+        <!-- Main Navigation Header -->
+        <header class="kh-header">
+            <div class="kh-header-content">
+                <div class="kh-logo-area">
+                    <img src="assets/logo-icon.png" alt="SHUNT Core" class="kh-main-logo">
+                    <span class="kh-hub-name">SHUNT</span>
+                </div>
+                
+                <nav class="kh-nav">
+                    <a href="https://github.com/tuo-username/tuo-repo" target="_blank" class="kh-nav-link" data-i18n="nav_repo">REPOSITORY GITHUB</a>
+                    <a href="https://github.com/d4N-87/KSimply" target="_blank" class="kh-nav-link kh-ksimply-link" data-i18n="nav_ksimply_cta">Non sai cosa scegliere?<br>Usa KSimply!</a>
+                </nav>
+
+                <div class="kh-lang-selector">
+                    <button onclick="khSetLang('it')" class="kh-lang-btn">IT</button>
+                    <button onclick="khSetLang('en')" class="kh-lang-btn">EN</button>
+                    <button onclick="khSetLang('fr')" class="kh-lang-btn">FR</button>
+                    <button onclick="khSetLang('de')" class="kh-lang-btn">DE</button>
+                    <button onclick="khSetLang('es')" class="kh-lang-btn">ES</button>
+                    <button onclick="khSetLang('pt')" class="kh-lang-btn">PT</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="kh-app-container">
+            <!-- Top Dashboard Stats -->
+            <div class="kh-stats-panel">
+                <div class="kh-stat-chip">LOAD: <span id="kh-val-load">0%</span></div>
+                <div class="kh-stat-chip">REG: <span id="kh-val-reg">---</span></div>
+                <div class="kh-stat-chip">HEX: <span id="kh-val-hex">0x00</span></div>
+            </div>
+
+            <!-- Terminal Intro Display -->
+            <div class="kh-intro-container">
+                <div class="kh-intro-box kh-screen">
+                    <div class="kh-screen-overlay"></div>
+                    <div class="kh-intro-header">
+                        <span class="kh-intro-dot"></span>
+                        <span data-i18n="intro_title">MANIFESTO ACCESSO DATI</span>
+                    </div>
+                    <div class="kh-screen-body">
+                        <p class="kh-intro-text">
+                            <span data-i18n="intro_desc">HUB centralizzato per il recupero di risorse IA Open Source. Questo terminale fornisce accesso diretto a Checkpoints, Text Encoders e modelli VAE ottimizzati per la generazione locale.</span><span class="kh-cursor">█</span>
+                        </p>
+                    </div>
+                    <!-- Animated Data Ticker -->
+                    <div class="kh-ticker-wrap">
+                        <div class="kh-ticker-content">
+                            0x88 AF 99 // ERROR_STABLE_DIFF // 00101010 // SECTOR_7G // ACCESS_GRANTED // 0xCC 12 // KSIMPLY_DATA_LINK // █▒░░ █▒░░ // SYSTEM_IDLE // 0x88 AF 99 // ERROR_STABLE_DIFF // 00101010 // SECTOR_7G // ACCESS_GRANTED // 0xCC 12 // KSIMPLY_DATA_LINK // █▒░░ █▒░░ // SYSTEM_IDLE
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hardware Interaction Unit -->
+            <div class="kh-floppy-unit">
+                <div class="kh-floppy-chassis"><div class="kh-floppy-line"></div><div class="kh-led-status"></div></div>
+                <div class="kh-eject-btn" onclick="khResetApp()"></div>
+            </div>
+
+            <!-- Technical Monitoring Widgets -->
+            <div class="kh-widgets-row">
+                <div class="kh-widget-box">
+                    <div class="kh-w-label"><span>M.01 / STATUS</span><span style="color:var(--brand-gold)">● LIVE</span></div>
+                    <div class="kh-loading-bar-wrap">
+                        <div class="kh-loading-bar-fill"></div>
+                    </div>
+                </div>
+                <div class="kh-widget-box">
+                    <div class="kh-w-label"><span>M.02 / DATA_STREAM</span></div>
+                    <div id="kh-ascii-bar" class="kh-ascii-progress">░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░</div>
+                </div>
+                <div class="kh-widget-box">
+                    <div class="kh-w-label"><span>M.03 / FREQUENCY</span></div>
+                    <canvas id="kh-sine-wave" class="kh-sine-canvas"></canvas>
+                </div>
+            </div>
+
+            <!-- Global Search & Filters -->
+            <div class="kh-search-hub">
+                <input type="text" id="kh-search-input" class="kh-main-input" placeholder="CONNECTING...">
+                <div class="kh-filters">
+                    <button id="f-Video" onclick="khToggleFilter('Video')" class="kh-f-btn">VIDEO</button>
+                    <button id="f-Image" onclick="khToggleFilter('Image')" class="kh-f-btn">IMAGE</button>
+                    <button id="f-Audio" onclick="khToggleFilter('Audio')" class="kh-f-btn">AUDIO</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Content Target -->
+            <div id="kh-target" class="kh-fade">
+                <div class="kh-mono py-20 animate-pulse uppercase tracking-widest text-center" style="color:#555">Initializing Technical Interface...</div>
+            </div>
+        </div>
+
+        <!-- System Footer Console -->
+        <footer class="kh-footer">
+            <div class="kh-console-wrapper">
+                <div class="kh-console-side kh-mobile-hide">
+                    <div class="kh-side-label">DIAGNOSTIC</div>
+                    <div class="kh-diag-grid">
+                        <div class="kh-diag-led active"></div><div class="kh-diag-led active"></div>
+                        <div class="kh-diag-led"></div><div class="kh-diag-led active"></div>
+                    </div>
+                    <div class="kh-mini-graph">
+                        <div class="kh-graph-bar" style="height:40%"></div>
+                        <div class="kh-graph-bar" style="height:70%"></div>
+                        <div class="kh-graph-bar" style="height:55%"></div>
+                    </div>
+                </div>
+
+                <div class="kh-console-screen">
+                    <div class="kh-screen-overlay"></div>
+                    <div class="kh-footer-status">
+                        <span class="kh-status-led"></span>
+                        <span class="kh-mono" data-i18n="footer_sync">SINCRO DATABASE: ATTIVA</span>
+                    </div>
+                    <p class="kh-footer-source-txt" data-i18n="footer_source">Dati estratti e processati dal repository KSimply.</p>
+                    <a href="https://github.com/d4N-87/KSimply" target="_blank" class="kh-footer-link">
+                        <span data-i18n="footer_repo_link">VEDI REPOSITORY</span>
+                    </a>
+                </div>
+
+                <div class="kh-console-side kh-mobile-hide">
+                    <div class="kh-side-label">SYS_LOAD</div>
+                    <div class="kh-level-meter">
+                        <div class="kh-level-fill"></div>
+                    </div>
+                    <div class="kh-mono" style="font-size:8px; margin-top:5px; color:#555">EXT_LNK: 100%</div>
+                </div>
+            </div>
+
+            <!-- Hardware Parallel Port (Style Element) -->
+            <div class="kh-parallel-port">
+                <div class="kh-port-bezel">
+                    <div class="kh-port-shape">
+                        <div class="kh-pins-row top-row">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <div class="kh-pins-row bottom-row">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="kh-port-id">PRINTER / DATA_EXT</div>
+                <div class="kh-footer-copyright">
+                    <span class="kh-mono">v1.0 // SHUNT_TERMINAL_01</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
