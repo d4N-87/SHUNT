@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHUNT - AI Resource Hub</title>
-    
+    <meta name="description" content="SHUNT - Centralized terminal for open-source AI resources. Direct, organized links to Checkpoints, Text Encoders and VAE models from the KSimply database.">
+
+    <!-- Open Graph (link previews) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SHUNT - AI Resource Hub">
+    <meta property="og:description" content="Direct, organized links to open-source AI Checkpoints, Text Encoders and VAE models.">
+    <meta property="og:image" content="assets/logo-icon.png">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/logo-icon.png">
 
-    <!-- Tailwind CSS (Utility classes) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
     <!-- Google Fonts: Inter & Fira Code -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Custom Terminal Styling -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-[#1a1a1a]">
+<body>
 
     <div id="kh-master-root">
         <!-- Main Navigation Header -->
@@ -110,7 +114,7 @@
 
             <!-- Dynamic Content Target -->
             <div id="kh-target" class="kh-fade">
-                <div class="kh-mono py-20 animate-pulse uppercase tracking-widest text-center" style="color:#555">Initializing Technical Interface...</div>
+                <div class="kh-loading-msg" data-i18n="loading">Initializing technical interface...</div>
             </div>
         </div>
 

@@ -175,6 +175,55 @@
     100% { transform: translate(0); text-shadow: none; }
 }
 
+/* --- BASE / UTILITY (replaces Tailwind CDN) --- */
+body { background-color: #1a1a1a; margin: 0; }
+.kh-mono { font-family: 'Fira Code', monospace; }
+.kh-fade { animation: khFade 0.4s ease-out; }
+
+.kh-loading-msg {
+    font-family: 'Fira Code', monospace;
+    padding: 5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-align: center;
+    color: #555;
+    animation: khTextPulse 2s ease-in-out infinite;
+}
+
+/* Model list grid (was: grid grid-cols-1 md:grid-cols-2 gap-x-6) */
+.kh-model-grid { display: grid; grid-template-columns: 1fr; column-gap: 1.5rem; }
+@media (min-width: 768px) { .kh-model-grid { grid-template-columns: 1fr 1fr; } }
+
+/* Detail card layout (was inline Tailwind utilities) */
+.kh-card-head { margin-bottom: 3.5rem; text-align: left; }
+.kh-release-list { margin-bottom: 4rem; }
+.kh-release-info { display: flex; align-items: center; gap: 0.5rem; text-align: left; }
+.kh-release-actions { display: flex; align-items: center; gap: 8px; }
+.kh-quant-name { color: #fff; font-weight: 700; font-size: 12px; width: 5rem; text-align: left; }
+.kh-included-note { font-size: 10px; color: #64748b; font-style: italic; padding-left: 1rem; }
+.kh-sub-block { margin-bottom: 2.5rem; text-align: left; }
+.kh-sub-block:last-child { margin-bottom: 0; }
+.kh-sub-name { font-family: 'Fira Code', monospace; font-size: 14px; font-weight: 800; color: #888; text-transform: uppercase; margin-bottom: 1rem; }
+
+/* Keyboard accessibility */
+.kh-model-box:focus-visible,
+.kh-back-btn:focus-visible,
+.kh-f-btn:focus-visible,
+.kh-lang-btn:focus-visible,
+.kh-btn-copy:focus-visible,
+.kh-btn-dl:focus-visible { outline: 2px solid var(--brand-gold); outline-offset: 2px; }
+
+@keyframes khTextPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
 /* --- RESPONSIVE --- */
 @media (max-width: 900px) { .kh-console-wrapper { grid-template-columns: 1fr; } .kh-mobile-hide { display: none; } }
 /* --- RESPONSIVE FIX (MOBILE OPTIMIZATION) --- */

@@ -8,7 +8,11 @@ const i18n = {
         intro_desc: "HUB centralizzato per il recupero di risorse IA Open Source. Questo terminale fornisce accesso diretto a Checkpoints, Text Encoders e modelli VAE ottimizzati per la generazione locale.",
         footer_sync: "SINCRO DATABASE: ATTIVA",
         footer_source: "Dati estratti e processati dal repository KSimply.",
-        footer_repo_link: "VEDI REPOSITORY"
+        footer_repo_link: "VEDI REPOSITORY",
+        loading: "Inizializzazione interfaccia tecnica...",
+        conn_error: "ERRORE DI CONNESSIONE AL SISTEMA",
+        included: "Già incluso nel modello principale",
+        not_found: "MODELLO NON TROVATO"
     },
     en: {
         nav_repo: "GITHUB REPOSITORY",
@@ -19,18 +23,26 @@ const i18n = {
         intro_desc: "Centralized HUB for Open Source AI resources. This terminal provides direct access to Checkpoints, Text Encoders, and VAE models optimized for local generation.",
         footer_sync: "DATABASE SYNC: ACTIVE",
         footer_source: "Data fetched and processed from KSimply repository.",
-        footer_repo_link: "VIEW REPOSITORY"
+        footer_repo_link: "VIEW REPOSITORY",
+        loading: "Initializing technical interface...",
+        conn_error: "SYSTEM CONNECTION ERROR",
+        included: "Already included in main model",
+        not_found: "MODEL NOT FOUND"
     },
     fr: {
-        nav_repo: "RÉPERTOIRE GITHUB",
-        nav_ksimply_cta: "Pas sûr de choisir?<br>Utilisez KSimply!",
-        search_placeholder: "CONNEXION AU RÉPERTOIRE...",
+        nav_repo: "DÉPÔT GITHUB",
+        nav_ksimply_cta: "Pas sûr de votre choix ?<br>Utilisez KSimply !",
+        search_placeholder: "CONNEXION AU DÉPÔT...",
         back_btn: "← RETOUR",
         intro_title: "MANIFESTE D'ACCÈS AUX DONNÉES",
-        intro_desc: "HUB centralisé per le ressources IA Open Source. Ce terminal offre un accès direct aux Checkpoints, Text Encoders et modèles VAE optimisés pour la génération locale.",
-        footer_sync: "SYNC BASE DE DONNÉES: ACTIVE",
-        footer_source: "Données extraites e traitées depuis le répertoire KSimply.",
-        footer_repo_link: "VOIR LE RÉPERTOIRE"
+        intro_desc: "HUB centralisé pour les ressources IA Open Source. Ce terminal offre un accès direct aux Checkpoints, Text Encoders et modèles VAE optimisés pour la génération locale.",
+        footer_sync: "SYNC BASE DE DONNÉES : ACTIVE",
+        footer_source: "Données extraites et traitées depuis le dépôt KSimply.",
+        footer_repo_link: "VOIR LE DÉPÔT",
+        loading: "Initialisation de l'interface technique...",
+        conn_error: "ERREUR DE CONNEXION AU SYSTÈME",
+        included: "Déjà inclus dans le modèle principal",
+        not_found: "MODÈLE INTROUVABLE"
     },
     de: {
         nav_repo: "GITHUB REPOSITORY",
@@ -41,7 +53,11 @@ const i18n = {
         intro_desc: "Zentraler HUB für Open-Source-KI-Ressourcen. Dieses Terminal bietet direkten Zugriff auf Checkpoints, Text-Encoder und VAE-Modelle, die für die lokale Generierung optimiert sind.",
         footer_sync: "DATENBANK-SYNC: AKTIV",
         footer_source: "Daten aus dem KSimply-Repository extrahiert und verarbeitet.",
-        footer_repo_link: "REPOSITORY ANSEHEN"
+        footer_repo_link: "REPOSITORY ANSEHEN",
+        loading: "Technische Schnittstelle wird initialisiert...",
+        conn_error: "SYSTEMVERBINDUNGSFEHLER",
+        included: "Bereits im Hauptmodell enthalten",
+        not_found: "MODELL NICHT GEFUNDEN"
     },
     es: {
         nav_repo: "REPOSITORIO GITHUB",
@@ -52,7 +68,11 @@ const i18n = {
         intro_desc: "HUB centralizado para recursos de IA de código abierto. Esta terminal proporciona acceso directo a Checkpoints, Text Encoders y modelos VAE optimizados para la generación local.",
         footer_sync: "SINCRO DE BASE DE DATOS: ACTIVA",
         footer_source: "Datos extraídos y procesados del repositorio KSimply.",
-        footer_repo_link: "VER REPOSITORIO"
+        footer_repo_link: "VER REPOSITORIO",
+        loading: "Inicializando interfaz técnica...",
+        conn_error: "ERROR DE CONEXIÓN DEL SISTEMA",
+        included: "Ya incluido en el modelo principal",
+        not_found: "MODELO NO ENCONTRADO"
     },
     pt: {
         nav_repo: "REPOSITÓRIO GITHUB",
@@ -63,6 +83,10 @@ const i18n = {
         intro_desc: "HUB centralizado para recursos de IA de código aberto. Este terminal fornece acesso direto a Checkpoints, Text Encoders e modelos VAE otimizados para geração local.",
         footer_sync: "SINCRO DE BASE DE DADOS: ATIVA",
         footer_source: "Dados extraídos e processados do repositório KSimply.",
-        footer_repo_link: "VER REPOSITÓRIO"
+        footer_repo_link: "VER REPOSITÓRIO",
+        loading: "Inicializando interface técnica...",
+        conn_error: "ERRO DE CONEXÃO DO SISTEMA",
+        included: "Já incluído no modelo principal",
+        not_found: "MODELO NÃO ENCONTRADO"
     }
 };
